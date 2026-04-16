@@ -1,128 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
-}
-.hero-text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-
-  font-size: 40px;
-  line-height: 60 px;
-
-  max-width: 700px;
-  margin: 0 auto;
-
-  color: white;
-  text-align: center;
-}
-.font-satoshi {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-.blue-button {
-  width: 171px;
-  height: 47px;
-
-  background-color: #24286B; /* blue */
-  color: white;
-
-  border: none;
-  border-radius: 25px;
-
-  padding: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  cursor: pointer;
-}
-.blue{
-  width: 20px;
-  height: 50px;
-   background-color: #24286B;
-}
-.Rajdhani {
-  font-family: 'Rajdhani', sans-serif;
-  
-}
+@import "tailwindcss";
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Light.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.otf") format("opentype");
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'Aileron';
-  src: url('/fonts/Aileron-Bold.otf') format('opentype');
+  font-family: "Aileron";
+  src: url("/fonts/Aileron-Bold.otf") format("opentype");
   font-weight: 700;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'Aileron-semibold';
-  src: url('/fonts/Aileron-SemiBold.otf') format('opentype');
+  font-family: "Aileron Semi";
+  src: url("/fonts/Aileron-SemiBold.otf") format("opentype");
   font-weight: 600;
   font-display: swap;
 }
 
-.aileron-semibold{
-  font-family: 'Aileron-semibold', sans-serif;
-}
-body {
-  font-family: 'Satoshi', sans-serif;
+@theme {
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-aileron: "Aileron", sans-serif;
+  --font-aileron-semi: "Aileron Semi", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
+
+  --color-brand-navy: #26296f;
+  --color-brand-navy-strong: #24286b;
+  --color-brand-ink: #13162b;
+  --color-brand-muted: #61657f;
+  --color-brand-line: #e8ebf4;
+  --color-brand-card: #f5f7fb;
 }
 
-.font-aileron{
-  font-family: 'Aileron', sans-serif;
-}
-.white-button {
-  background-color: #F5F5F5;
-  color: #333;
-  border: 1px solid #ddd;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-  padding: 10px 24px;
-  border-radius: 25px;
+  html {
+    scroll-behavior: smooth;
+  }
 
-  font-size: 14px;
-  font-weight: 500;
-}
-.about-text {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #555;
-}
+  body {
+    margin: 0;
+    font-family: var(--font-satoshi);
+    background: #ffffff;
+    color: var(--color-brand-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-/* IMAGE */
-.about-image {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 4px;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-/* RIGHT BOXES */
-.info-card {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 4px;
-}
-
-.info-card h6 {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.info-card p {
-  font-size: 14px;
-  color: #444;
-  margin: 0;
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
